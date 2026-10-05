@@ -550,37 +550,18 @@ a.card-link:focus-visible {
   padding-left: 1rem;
 }
 
-.about-stat {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.85rem;
-  margin-top: 2.15rem;
-}
-
-.stat {
-  background: var(--cream);
-  border-radius: 12px;
-  padding: 1.15rem 0.85rem;
-  text-align: center;
-  border: 1px solid rgba(11, 61, 46, 0.08);
-  box-shadow: 0 4px 14px rgba(6, 40, 32, 0.04);
-}
-
-.stat strong {
-  display: block;
+.about-credoline {
+  margin-top: 2rem;
+  display: inline-block;
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 2.4vw, 1.65rem);
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--forest);
-  line-height: 1.1;
-  margin-bottom: 0.35rem;
-  letter-spacing: -0.02em;
-}
-
-.stat span {
-  font-size: 0.78rem;
-  color: var(--muted);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  line-height: 1.35;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid var(--cedar-warm);
 }
 
 .about-photo {
@@ -976,7 +957,6 @@ a.card-link:focus-visible {
   .about-photo { aspect-ratio: 16 / 10; max-height: 380px; }
   .about-photo img { object-position: 32% 40%; }
   .about-photo-caption { padding: 2rem 1rem 0.9rem; font-size: 0.72rem; }
-  .about-stat { grid-template-columns: repeat(3, 1fr); }
   .about-copy h2 { max-width: none; }
 }
 
@@ -1028,7 +1008,6 @@ a.card-link:focus-visible {
 }
 
 @media (max-width: 480px) {
-  .about-stat { grid-template-columns: 1fr; }
   .areas-grid { grid-template-columns: 1fr; }
   .container { width: min(100% - 1.75rem, var(--max)); }
 }
