@@ -616,20 +616,50 @@ a.card-link:focus-visible {
   background: var(--gold);
 }
 
-/* CTA band */
+/* Footer hero + CTA band */
+.footer-hero.cta-band,
 .cta-band {
-  background:
-    linear-gradient(120deg, rgba(6, 40, 32, 0.94), rgba(11, 61, 46, 0.88)),
-    url("https://images.pexels.com/photos/4162011/pexels-photo-4162011.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover;
+  position: relative;
   color: var(--white);
-  padding: 5rem 0;
+  padding: clamp(4rem, 10vw, 6.5rem) 0;
   text-align: center;
+  overflow: hidden;
+  min-height: clamp(380px, 52vw, 560px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--forest-deep);
 }
 
-.cta-band h2 { margin-bottom: 0.85rem; }
-.cta-band .lead {
+.footer-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(6, 40, 32, 0.9) 0%, rgba(6, 40, 32, 0.72) 42%, rgba(11, 61, 46, 0.48) 68%, rgba(6, 40, 32, 0.55) 100%),
+    linear-gradient(to top, rgba(6, 40, 32, 0.65) 0%, transparent 45%),
+    url("assets/footer-hero.jpg") center 42%/cover no-repeat;
+}
+
+.footer-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.footer-hero .eyebrow {
+  color: var(--cedar-warm);
+}
+
+.cta-band h2,
+.footer-hero h2 {
+  margin-bottom: 0.85rem;
+  text-shadow: 0 4px 28px rgba(0,0,0,0.35);
+}
+
+.cta-band .lead,
+.footer-hero .lead {
   margin: 0 auto 1.75rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.88);
 }
 
 .cta-phones {
@@ -962,4 +992,14 @@ a.card-link:focus-visible {
 .section-dark .feature-quote {
   color: var(--cream);
   border-left-color: var(--cedar-warm);
+}
+
+@media (max-width: 768px) {
+  .footer-hero.cta-band {
+    min-height: 420px;
+    padding: 3.5rem 0 4.5rem;
+  }
+  .footer-hero-bg {
+    background-position: center, center, center 38%;
+  }
 }
